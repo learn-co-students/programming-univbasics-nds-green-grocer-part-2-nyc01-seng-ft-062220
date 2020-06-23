@@ -32,10 +32,8 @@ end
 def apply_clearance(cart)
 
   cart.each do |grocery_item|
-    item_name = grocery_item[:item]
     item_price = grocery_item[:price]
     item_clearance = grocery_item[:clearance]
-    item_count = grocery_item[:count]
 
     if item_clearance == true
       discount_price = (item_price - (item_price * 0.20)).round(2)
